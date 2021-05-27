@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+
+    <title>Criar Página</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Criar Página</a>
+            <a href="#" data-activates="menu-mobile" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="#">Criar Página</a></li>
+                <li><a href="../../editar_pagina.php">Editar Página</a></li>
+                <li><a href="lib/HTML/deletar_pagina.htm">Deletar Página</a></li>
+
+            </ul>
+            <ul class="side-nav" id="menu-mobile">
+                <li><a href="../../index.php">Home </a></li>
+                <li><a href="#">Criar Página</a></li>
+                <li><a href="../../editar_pagina.php">Editar Página</a></li>
+                <li><a href="lib/HTML/deletar_pagina.htm">Deletar Página</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <form method="POST" action="../PHP/criar_pagina.php">
+        <label>Titulo: </label><input type="text" name="titulo" id="titulo" required><br>
+        <label>Slug: </label><input type="text" name="slug" id="slug" required><br>
+        <label>Corpo: </label><input type="text" name="corpo" id="corpo" required><br>
+        <label>Autor: </label><input type="text" name="autor" id="autor" required><br>
+        <input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" required>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script>
+        $(function () {
+            $(".button-collapse").sideNav();
+        });
+    </script>
+</body>
+
+</html>
